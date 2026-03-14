@@ -3,7 +3,7 @@ import './Country.css';
 
 
 // distructure country from props
-const Country = ({ country, handleVisitedCountries }) => {
+const Country = ({ country, handleVisitedCountries , handleVisitedFlags }) => {
     const [visited, setVisited] = useState(false);
     // console.log(country);
     // console.log(handleVisitedCountries);
@@ -22,6 +22,7 @@ const Country = ({ country, handleVisitedCountries }) => {
         // 3rd way
         setVisited(!visited);
         handleVisitedCountries(country);
+        handleVisitedFlags(country.flags.flags.png);
     }
 
     return (
@@ -47,6 +48,10 @@ const Country = ({ country, handleVisitedCountries }) => {
 
             <button onClick={handleVisited}>
                 {visited ? "Visited" : "Not Visited"}
+            </button>
+
+            <button onClick={() => handleVisitedFlags(country?.flags?.flags?.png)}>
+                Add Visited Flag
             </button>
 
 
