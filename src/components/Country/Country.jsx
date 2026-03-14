@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './Country.css';
 
-const Country = ({ country }) => {
+
+// distructure country from props
+const Country = ({ country, handleVisitedCountries }) => {
     const [visited, setVisited] = useState(false);
     // console.log(country);
+    // console.log(handleVisitedCountries);
 
     const handleVisited = () => {
         // 1st way
@@ -18,9 +21,11 @@ const Country = ({ country }) => {
         
         // 3rd way
         setVisited(!visited);
+        handleVisitedCountries(country);
     }
 
     return (
+
         // <div className={`
         // country ${visited ? 'country-visited' : 'country-not-visited'
 
