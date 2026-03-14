@@ -13,7 +13,7 @@ const Countries = ({ countriesPromise }) => {
             <div className="countries">
                 {
                     countries.map(country => <Country
-                        key={country.cca3}
+                        key={country.cca3?.cca3 || country.name?.common}
                         country={country}></Country>)
                 }
             </div>

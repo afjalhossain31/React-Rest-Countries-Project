@@ -11,5 +11,8 @@
 }
 
 .country-visited{
-    background-color: aquamarine;
+    background-color: rgb(9, 180, 123);
+}
+.country-not-visited{
+    background-color: lightcoral;
 }
